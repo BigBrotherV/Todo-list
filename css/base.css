@@ -149,7 +149,7 @@ button {
 
 .task-detail .content {
     padding: 10px;
-    font-weight: 700;
+    font-weight: 900;
     cursor: pointer;
 }
 
@@ -163,7 +163,6 @@ button {
     bottom: 0;
     right: 0;
     left: 0;
-
 }
 
 .task-content {
@@ -177,4 +176,21 @@ button {
 
 .action:hover {
     color: #333;
+}
+
+.msg {
+    display: none;
+    text-align: center;
+    background: #ffe264;
+    padding: 10px;
+    color: #333;
+}
+
+.anchor {
+    cursor: pointer;
+}
+
+.alerter {
+    width: 0;
+    height: 0;
 }
