@@ -82,8 +82,8 @@ button {
     margin-right: 1%;
 }
 
+button.primary,
 [type=submit] {
-    border: 0;
     background: #46b1e4;
 }
 

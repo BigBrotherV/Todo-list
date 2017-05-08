@@ -177,7 +177,7 @@
         $task_detail_trigger.on('click', function() {
             var $this = $(this);
             var $item = $this.parent().parent();
-            var index = $item.data('index');
+            index = $item.data('index');
             show_task_detail(index);
         })
     }
@@ -297,9 +297,11 @@
             // 找到删除按钮所在的task元素
             var $item = $this.parent().parent();
             var index = $item.data('index');
-            // 确认删除
-            var tmp = confirm('确定删除？');
-            tmp ? delete_task(index) : null;
+            /*确认删除*/
+            pop('确定删除?')
+            .then(function (r) {
+                r ? delete_task(index) : null;
+            })
         })
     }
 
@@ -336,7 +338,6 @@
     }
 
     function task_remind_check() {
-        // show_msg('123');
         var current_timestamp;
         var itl = setInterval(function() {
             for (var i = 0; i < task_list.length; i++) {
